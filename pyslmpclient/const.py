@@ -310,6 +310,7 @@ class EndCode(enum.Enum):
     WrongCommand = 0xC059
     WrongFormat = 0xC05C
     WrongLength = 0xC061
+    RequestNotSupported = 0xC05F
     Busy = 0xCEE0
     ExceedReqLength = 0xCEE1
     ExceedRespLength = 0xCEE2
