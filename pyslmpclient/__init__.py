@@ -170,7 +170,7 @@ class SLMPClient(object):
                 return
             try:
                 self.__socket.settimeout(0)
-                buf = self.__socket.recv(512)
+                buf = self.__socket.recv(1500)
                 self.__socket.settimeout(1)
             except socket.timeout and BlockingIOError:
                 return
