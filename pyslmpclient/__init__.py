@@ -119,6 +119,9 @@ class SLMPClient(object):
                 finally:
                     self.__socket.close()
                     self.__socket = None
+                self.__recv_thread = threading.Thread(
+                    target=self.__worker, daemon=True
+                )
 
     def __cmd_format(self, timeout, cmd, sub_cmd, data):
         """コマンドにヘッダを加え送信する
